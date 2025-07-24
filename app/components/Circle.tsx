@@ -17,7 +17,9 @@ const Circle = ({
     return (
       <Link
         className={`relative bg-white p-1 flex flex-col items-center justify-center border-4 border-black overflow-hidden rounded-full hover:bg-gray-50 hover:scale-105 transition duration-200 ${
-          variant.slice(7) === "small" ? "h-16 w-16" : "h-32 w-32"
+          variant.slice(7) === "small"
+            ? "h-12 w-12 sm:h-16 sm:w-16"
+            : "h-32 w-32"
         } `}
         href={`${href}`}
       >
@@ -30,8 +32,8 @@ const Circle = ({
     }
     return (
       <div
-        className={`relative bg-white border-4 border-black rounded-full ${
-          variant === "small" ? "h-16 w-16" : "h-32 w-32"
+        className={`relative bg-white border-4 p-2 flex items-center justify-center shrink-0 overflow-hidden border-black rounded-full ${
+          variant === "small" ? "h-12 w-12 lg:h-16 lg:w-16" : "h-32 w-32"
         } `}
       >
         {children}
