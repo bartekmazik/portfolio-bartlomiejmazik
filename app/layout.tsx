@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Bartłomiej Mazik",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://bartlomiejmazik.dev/opengraph-image.png",
         width: 1200,
         height: 630,
       },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Bartłomiej Mazik",
     description: "Portfolio",
-    images: ["/og-image.png"],
+    images: ["https://bartlomiejmazik.dev/opengraph-image.png"],
   },
 };
 
