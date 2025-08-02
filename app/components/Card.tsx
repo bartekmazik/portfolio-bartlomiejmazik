@@ -13,7 +13,7 @@ const Card = ({
     <div
       className={`${className} border-4 border-black ${
         shadow ? "drop-shadow-small" : ""
-      } rounded-xl min-h-[20vh] p-4 `}
+      } rounded-xl  p-4 `}
     >
       {children}
     </div>

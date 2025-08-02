@@ -140,7 +140,9 @@ const HeroMain = () => {
       <div className="sm:block hidden relative w-2/5 h-full  rounded-lg overflow-hidden">
         <Image
           src="/coding-guy.webp"
-          fill
+          width={1024}
+          height={1024}
+          priority
           alt="Hero Coding Guy Picture"
           className="object-bottom"
         />

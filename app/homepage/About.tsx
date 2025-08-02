@@ -56,7 +56,13 @@ const About = () => {
           </div>
         </div>
         <div className="hidden lg:block relative w-1/2 border-4 border-black rounded-lg ">
-          <Image src="/me.webp" fill alt="bartek" className="object-cover" />
+          <Image
+            src="/me.webp"
+            fill
+            priority
+            alt="bartek"
+            className="object-cover"
+          />
         </div>
       </Card>
     </section>
