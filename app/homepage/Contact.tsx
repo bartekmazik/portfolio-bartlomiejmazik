@@ -1,25 +1,96 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Card from "../components/Card";
-import Button from "../components/Button";
 import { Mail, MapPin, Phone } from "lucide-react";
+import FormButton from "../components/FormButton";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import * as z from "zod";
+import { useForm } from "react-hook-form";
+
+const messageSchema = z.object({
+  email: z.string().email("Incorrect email."),
+  message: z.string().min(1, "Message cannot be empty."),
+});
+
+type MessageBody = z.infer<typeof messageSchema>;
 
 const ContactForm = () => {
+  const [status, setStatus] = useState<string | undefined>();
+  const [loading, setLoading] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<MessageBody>({
+    resolver: zodResolver(messageSchema),
+    defaultValues: {
+      email: "",
+      message: "",
+    },
+  });
+
+  async function sendMessage(data: MessageBody) {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const info = await res.json();
+      setLoading(false);
+      setStatus(info.message);
+      reset();
+    } catch {
+      setStatus("Try again later.");
+    }
+  }
   return (
     <Card
-      className="sm:h-[50vh] md:h-[30vh] lg:h-full bg-white lg:w-1/3"
+      className="sm:min-h-[50vh] md:min-h-[30vh] lg:min-h-full bg-white lg:w-1/3"
       shadow={false}
     >
-      <form className="flex flex-col gap-2 h-full">
+      <form
+        className="flex flex-col gap-2 h-full"
+        onSubmit={handleSubmit(sendMessage)}
+      >
         <input
           placeholder="Email"
           className="border-2 border-gray-200 rounded-lg p-2 "
+          {...register("email")}
         ></input>
+        {errors.email && (
+          <p className="text-red-500 text-sm mt-1 ml-2">
+            {errors.email.message}
+          </p>
+        )}
         <textarea
           placeholder="Message"
           className="border-2 border-gray-200 h-full rounded-lg p-2"
+          {...register("message")}
         />
+        {errors.message && (
+          <p className="text-red-500 text-sm mt-1 ml-2">
+            {errors.message.message}
+          </p>
+        )}
         <div className="self-center p-4">
-          <Button text="Send message" variant="yellow" />
+          {status ? (
+            <div className="py-4 px-6 font-bold w-full text-lg ">{status}</div>
+          ) : (
+            <FormButton
+              text={isSubmitting ? "Sending" : "Send message"}
+              loading={loading}
+              variant="yellow"
+              className={`${status ? "hidden" : ""}`}
+            />
+          )}
         </div>
       </form>
     </Card>
@@ -28,16 +99,16 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <section className="lg:h-[90vh] p-4 scroll-mt-22" id="contact">
+    <section className="lg:min-h-[90vh] p-4 scroll-mt-22" id="contact">
       <Card className="h-full bg-white flex flex-col gap-6 justify-between">
         <div className="flex flex-col gap-4">
           <h2 className=" font-bold text-3xl text-center sm:text-start sm:text-5xl">
-            Let's talk
+            {`Let's talk`}
           </h2>
           <p className="text-lg lg:w-2/3 font-light">
-            Have a project in mind? Want to collaborate? Or just want to say
+            {`Have a project in mind? Want to collaborate? Or just want to say
             hello? I'd love to hear from you. Drop me a message and let's start
-            a conversation.
+            a conversation.`}
           </p>
         </div>
         <div className="sm:h-2/3 flex flex-col lg:flex-row justify-between gap-6">

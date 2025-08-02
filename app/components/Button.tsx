@@ -11,6 +11,7 @@ const Button = ({
   text: string;
   href?: string;
   className?: string;
+  submit?: boolean;
 }) => {
   return (
     <Link
