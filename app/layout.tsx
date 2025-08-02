@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Bartłomiej Mazik",
-    description: "Fullstack Developer",
+    description: "Portfolio",
     url: "https://bartlomiejmazik.dev",
     images: [
       {
