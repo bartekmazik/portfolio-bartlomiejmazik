@@ -51,10 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lexend.className} bg-background antialiased scroll-smooth `}
+        className={`${lexend.className} bg-white antialiased scroll-smooth `}
       >
         <Navbar />
-        <div className="pt-[10vh]">{children}</div>
+        <div className="pt-[10vh] bg-background">{children}</div>
         <Footer />
       </body>
     </html>
