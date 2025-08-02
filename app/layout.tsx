@@ -24,16 +24,17 @@ export const metadata: Metadata = {
     title: "Bartłomiej Mazik",
     description: "Fullstack Developer",
     url: "https://bartlomiejmazik.dev",
-    siteName: "Bartłomiej Mazik",
     images: [
       {
         url: "https://bartlomiejmazik.dev/opengraph-image.png",
+        secureUrl: "https://bartlomiejmazik.dev/opengraph-image.png",
         width: 1200,
         height: 630,
+        alt: "Portfolio",
       },
     ],
-    locale: "en_US",
     type: "website",
+    siteName: "Bartłomiej Mazik",
   },
   twitter: {
     card: "summary_large_image",
