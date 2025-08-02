@@ -29,7 +29,7 @@ const TechStack = () => {
           <p className="text-lg text-white">
             So far i worked with many web technologies which helped me
             understanding how programming works and made me create great
-            applications used in business
+            applications used in business.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row justify-between gap-4 sm:h-2/3">

@@ -9,12 +9,14 @@ const Project = ({
   imageUrl,
   imageAlt,
   border,
+  href,
 }: {
   title: string;
   description: string;
   imageUrl: string;
   imageAlt: string;
   border: boolean;
+  href: string;
 }) => {
   return (
     <div
@@ -32,7 +34,7 @@ const Project = ({
         <Button
           text="See demo"
           variant="yellow"
-          href="costam"
+          href={href}
           className="w-full sm:w-fit text-center self-center lg:self-auto"
         />
       </div>
@@ -62,6 +64,7 @@ const Projects = () => {
         </div>
         <Project
           title="Projectorium - project management app"
+          href="https://projectorium-ten.vercel.app/"
           description="Project used to present how gamification and project management
             could work together. App is made with Next.js, Nest.js and
             PrismaORM. It has various functions like creating and managing team
@@ -73,6 +76,7 @@ const Projects = () => {
         />
         <Project
           title="Manuart Festiwal - handmade festival page"
+          href="https://manuartfestiwal.pl"
           description="Webpage for handmade festival in Katowice. Backend and frontend is based on Next.js along with PrismaORM. Webpage consists of pages and components like: location map, newsletter form, contact form and informative components describing the festival."
           imageAlt="Manuart Festiwal"
           imageUrl="/projects/manuart.png"
@@ -80,6 +84,7 @@ const Projects = () => {
         />
         <Project
           title="Let's Brick It Down! - brick building event page"
+          href="https://letsbrickitdown.pl"
           description="Webpage for brick building festival in Katowice. Project was made in Next.js without server functions. Design of this page was self-made and shows the beauty of neobrutalistic style."
           imageAlt="Lets brick it down"
           imageUrl="/projects/letsbrickitdown.png"

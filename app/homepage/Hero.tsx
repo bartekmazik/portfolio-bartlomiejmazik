@@ -14,7 +14,7 @@ const HeroTech = () => {
         </h2>
         <p className="px-3 sm:px-0 sm:w-3/4 sm:text-start text-center text-white">
           Everyday I learn new technologies to keep up the best quality of my
-          websites
+          websites.
         </p>
       </div>
       <div className="flex flex-row items-center gap-2">
@@ -83,7 +83,7 @@ const HeroExperience = () => {
         </h2>
         <p className="w-full px-3 sm:text-start text-center sm:px-0 sm:w-3/4 text-white">
           Provided by self-made projects using back-end and front-end
-          technologies
+          technologies.
         </p>
       </div>
 
@@ -111,10 +111,13 @@ const HeroMain = () => {
           </p>
         </div>
         <div className="flex flex-row justify-center sm:justify-start items-center gap-2">
-          <Circle variant="button-small">
+          <Circle variant="button-small" href="https://github.com/bartekmazik">
             <GitHubLogoIcon width={"full"} height={"full"} />
           </Circle>
-          <Circle variant="button-small">
+          <Circle
+            variant="button-small"
+            href="https://www.linkedin.com/in/bartlomiejmazik/"
+          >
             <Image
               src="/socials/linkedin.svg"
               alt="linkedin"
@@ -123,7 +126,7 @@ const HeroMain = () => {
             />
           </Circle>
 
-          <Circle variant="button-small">
+          <Circle variant="button-small" href="/bartlomiej-mazik-cv.pdf">
             <Image
               src="/socials/resume.png"
               alt="linkedin"
@@ -138,7 +141,7 @@ const HeroMain = () => {
         <Image
           src="/coding-guy.png"
           fill
-          alt="heroguy"
+          alt="Hero Coding Guy Picture"
           className="object-bottom"
         />
       </div>
