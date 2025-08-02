@@ -71,7 +71,7 @@ const Projects = () => {
             project, complex ranking based on points given from tasks,
             milestones, notes and virtual mentor."
           imageAlt="Projectorium"
-          imageUrl="/projects/projectorium.png"
+          imageUrl="/projects/projectorium.webp"
           border={true}
         />
         <Project
@@ -79,7 +79,7 @@ const Projects = () => {
           href="https://manuartfestiwal.pl"
           description="Webpage for handmade festival in Katowice. Backend and frontend is based on Next.js along with PrismaORM. Webpage consists of pages and components like: location map, newsletter form, contact form and informative components describing the festival."
           imageAlt="Manuart Festiwal"
-          imageUrl="/projects/manuart.png"
+          imageUrl="/projects/manuart.webp"
           border={true}
         />
         <Project
@@ -87,7 +87,7 @@ const Projects = () => {
           href="https://letsbrickitdown.pl"
           description="Webpage for brick building festival in Katowice. Project was made in Next.js without server functions. Design of this page was self-made and shows the beauty of neobrutalistic style."
           imageAlt="Lets brick it down"
-          imageUrl="/projects/letsbrickitdown.png"
+          imageUrl="/projects/letsbrickitdown.webp"
           border={false}
         />
       </Card>

@@ -139,7 +139,7 @@ const HeroMain = () => {
       {/*Right side */}
       <div className="sm:block hidden relative w-2/5 h-full  rounded-lg overflow-hidden">
         <Image
-          src="/coding-guy.png"
+          src="/coding-guy.webp"
           fill
           alt="Hero Coding Guy Picture"
           className="object-bottom"
