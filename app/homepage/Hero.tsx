@@ -60,7 +60,7 @@ const HeroCustomers = () => {
           Happy customers
         </h2>
         <p className="w-full sm:text-start text-center px-2 sm:px-0 sm:w-3/4 text-white">
-          Created websites for clients that worked and meet their requirements.
+          Created websites for clients that worked and met their requirements.
         </p>
       </div>
 

@@ -57,7 +57,7 @@ const Projects = () => {
             Projects
           </h2>
           <p className="text-lg text-white md:w-4/5 lg:w-2/5">
-            Made some projects in various technologies which helped me
+            I made projects in various technologies which helped me
             understanding proper rules of coding and showed me how to reach
             client requirements. Here are some of them.
           </p>
@@ -66,7 +66,7 @@ const Projects = () => {
           title="Projectorium - project management app"
           href="https://projectorium-ten.vercel.app/"
           description="Project used to present how gamification and project management
-            could work together. App is made with Next.js, Nest.js and
+            could work together. App is created with Next.js, Nest.js and
             PrismaORM. It has various functions like creating and managing team
             project, complex ranking based on points given from tasks,
             milestones, notes and virtual mentor."

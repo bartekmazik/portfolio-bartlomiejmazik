@@ -27,7 +27,7 @@ const TechStack = () => {
             Tech stack
           </h1>
           <p className="text-lg text-white">
-            So far i worked with many web technologies which helped me
+            So far I worked with many web technologies which helped me
             understanding how programming works and made me create great
             applications used in business.
           </p>

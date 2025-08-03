@@ -12,10 +12,10 @@ const About = () => {
           <div className="text-center sm:text-start">
             <h1 className="font-bold text-3xl sm:text-5xl pb-4">About me</h1>
             <p className="text-lg text-start">
-              I’m aspiring full-stack developer ready to make creative software
-              and design for you and your company. Im interested in new
-              technologies and willing to constantly update my knowledge.
-              Personally i’m also a drone pilot with experience in video making
+              I am aspiring full-stack developer ready to make creative software
+              and design for you and your company. I am interested in new
+              technologies and willing to constantly expand my knowledge.
+              Personally I am also a drone pilot with experience in video making
               and editing.
             </p>
           </div>

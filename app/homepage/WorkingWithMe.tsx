@@ -30,7 +30,7 @@ const WorkingWithMe = () => {
             Work with me
           </h1>
           <p className="text-lg  lg:w-2/5">
-            So far i worked with many web technologies which helped me
+            So far I worked with many web technologies which helped me
             understanding how programming works and made me create great
             applications used in business.
           </p>
@@ -38,13 +38,13 @@ const WorkingWithMe = () => {
         <div className="sm:h-2/3 flex flex-col sm:flex-row justify-between w-full gap-6 ">
           <AdvantageCard
             title="Clean and scalable code"
-            description="I'm trying my best to create flexible and solid functionality for all of my projects."
+            description="I  create flexible and solid functionality for all of my projects."
           >
             <Code width={64} height={64} />
           </AdvantageCard>
           <AdvantageCard
             title="Communication and support"
-            description="Communcation is a key to success. Working with me is easy and understandable. I try all my best to meet requirements for my clients."
+            description="Communcation is a key to success. Working with me is easy and understandable. I do all my best to meet requirements for my clients."
           >
             <Handshake width={64} height={64} />
           </AdvantageCard>
